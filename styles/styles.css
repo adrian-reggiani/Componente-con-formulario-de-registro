@@ -22,7 +22,7 @@ html {
   }
   
   /* Diseño Movil*/
-  
+
   body{
     background-image: url(/images/bg-intro-mobile.png);
     background-repeat: no-repeat;
@@ -55,29 +55,33 @@ html {
   }
 
   .boton-prueba{
+    width: 100%;
     margin-bottom: 1.5rem;
-    padding: 0.2rem;
+    padding: 1rem;
     background-color: var(--Blue);
     color: hsl(9, 100%, 93%);
     text-align: center;
     border-radius: 0.5rem;
     box-shadow: 0 8px 0px 1px rgba(0,0,0,0.2);
     font-size: 1rem;
-    line-height: 2em;
+    border: none;
   }
+
 
   .boton-prueba span{
     font-weight: bold;
     color: white;
   }
+ 
   .boton-prueba p{
     margin:  0.5rem 3rem;
     color: var(--Grayish-Blue);
   }
 
+
   .formulario{
     width: 80vw;
-    height: 62vh;
+    height: 85%;
     padding: 1.5rem;
     background-color: white;
     border-radius: 0.5rem;
@@ -89,15 +93,26 @@ html {
   .formulario input{
     width: 100%;
     border-radius: 0.2rem;
-    border: 1px solid var(--Grayish-Blue);
+    border: 1px solid rgb(226, 226, 226);
     margin-bottom: 1rem;
     padding: 1rem;
     color: var(--Dark-Blue);
     font-weight: bold;
     font-size: 0.8rem;
+
   }
 
-  .formulario button{
+  .formulario .icono{
+    position: absolute;
+    left: 73%;
+    top: 71.5%;
+    }
+
+  .formulario .nombre{
+    position: absolute;
+  }
+
+  .formulario .boton-formulario{
     width: 100%;
     padding: 1rem;
     color: hsl(9, 100%, 93%);
@@ -119,4 +134,100 @@ html {
 
   .formulario span{
     color: var(--Red);
+   
   } 
+
+  .formulario span:hover{
+    cursor: pointer;
+    color: hsl(0, 88%, 58%);
+    text-decoration: underline;
+  }
+
+  .formulario .boton-formulario:hover{
+    background-color: hsl(154, 65%, 68%);
+    cursor: pointer;
+  }
+
+  
+  /* Desktop*/
+
+  @media (min-width: 768px ) {
+    body{
+      background-image:url(/images/bg-intro-desktop.png);
+      background-size: 100vw 100vh;
+      
+    }
+    main{
+      max-width: 100vw;
+      height: 100vh;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .informacion{
+      text-align: start;
+      margin: 5rem 3rem 3rem 0.5rem;
+      grid-row: 1 / span 2;
+    }
+
+    .informacion h1{
+      margin-right: 0rem;
+      margin-bottom: 0;
+      font-size: 3.3rem;
+      line-height: 3.3rem;
+    }
+    .informacion p{
+      margin-top: 1rem;
+    }
+    .formulario{
+      grid-column: 2/3;
+      width: 100%;
+      margin-bottom: 4.7rem;
+      margin-left: 2rem;
+    }
+
+    .boton-prueba{
+      margin-top: 6rem;
+      margin-bottom: 0;
+      margin-left: 2rem;
+    }
+
+    .formulario .icono{
+      left:88%;
+      top: 30%;
+      background-color: black;
+    }
+  }
+
+  /* Error */
+
+  .formulario .error-texto{ /*El erro que aparece abajo del input*/
+    color: var(--Red);
+    text-align:end;
+    position: relative;
+    bottom: 0.5rem;
+    right: 0.2rem;
+    font-size: 0.7rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .formulario .error-input{
+    border: 3px solid #FF8C8C;
+    position: relative;
+    background-image: url(../images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    color:#F03030;
+    font-weight: bold;
+  }
+ 
+  .formulario .error-input:focus-visible{
+    outline:none;
+  }
+  
+ 

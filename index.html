@@ -19,14 +19,14 @@
       but understanding how developers think is invaluable.</p>
     </div>
 
-    <div class="boton-prueba"><p><span>Try it free 7 days</span> then $20/mo. thereafter</p></div>
+    <button class="boton-prueba"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
     <form class="formulario" action="">
-      <input type="text" name="name" placeholder="First Name ">
-      <input type="text" name="lastname" placeholder="Last Name">
-      <input type="email" name="email" placeholder="Email Address">
-      <input type="password" name="password" placeholder="Password">
-      <button> Claim your free trial </button>
-      <p> By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+      <input type="text" class="name" name="name" placeholder="First Name" >
+      <input type="text" class="lastname" name="lastname" placeholder="Last Name">
+      <input type="email" class="email" name="email" placeholder="Email Address">
+      <input type="password" class="password" name="password" placeholder="Password">
+      <button onclick="validarFormulario()" class="boton-formulario"> Claim your free trial </button>
+      <p> By clicking the button, you are agreeing to our <span class="formulario-terms">Terms and Services</span></p>
     </form>
   
 
@@ -40,6 +40,7 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+  <script src="/script/script.js"></script>
   </main>
 </body>
 </html>
